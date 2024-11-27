@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "Financial chart built out of the box based on KLineChart.",
   "type": "module",
-  "main": "./dist/klinecharts-pro.umd.js",
-  "module": "./dist/klinecharts-pro.js",
+  "main": "./dist/kline-pro.umd.js",
+  "module": "./dist/kline-pro.js",
   "types": "./dist/index.d.ts",
   "files": [
     "LICENSE",
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/klinecharts/pro"
+    "url": "https://github.com/wmjchf/kline-pro.git"
   },
   "keywords": [
     "klinecharts",
@@ -24,7 +24,7 @@
     "chart",
     "canvas"
   ],
-  "author": "liihuu",
+  "author": "dogwang",
   "license": "Apache-2.0",
   "private": false,
   "scripts": {
