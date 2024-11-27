@@ -225,7 +225,9 @@ const ChartProComponent: Component<ChartProComponentProps> = (props) => {
         to = new Date(`${year}-01-01`).getTime();
         from = count * period.multiplier * 365 * 24 * 60 * 60 * 1000;
         const fromDate = new Date(from);
-        from = new Date(`${fromDate.getFullYear()}-01-01`).getTime();
+        // from = new Date(`${fromDate.getFullYear()}-01-01`).getTime();
+        // 当时间间隔是1年时，特殊处理
+        from = 631123200000;
         break;
       }
     }
