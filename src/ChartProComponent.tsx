@@ -401,6 +401,7 @@ const ChartProComponent: Component<ChartProComponentProps> = (props) => {
 
   onCleanup(() => {
     window.removeEventListener("resize", documentResize);
+    props.datafeed.unsubscribe();
     dispose(widgetRef!);
   });
 
