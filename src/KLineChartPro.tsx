@@ -18,7 +18,13 @@ import { utils, Nullable, DeepPartial, Styles } from "klinecharts";
 
 import ChartProComponent from "./ChartProComponent";
 
-import { SymbolInfo, Period, ChartPro, ChartProOptions } from "./types";
+import {
+  SymbolInfo,
+  Period,
+  ChartPro,
+  ChartProOptions,
+  Datafeed,
+} from "./types";
 
 const Logo = (
   <svg class="logo" viewBox="0 0 80 92">
@@ -40,7 +46,7 @@ export default class KLineChartPro implements ChartPro {
     }
     this._container.classList.add("klinecharts-pro");
     this._container.setAttribute("data-theme", options.theme ?? "light");
-
+    this._datafeed = options.datafeed;
     render(
       () => (
         <ChartProComponent
@@ -81,6 +87,8 @@ export default class KLineChartPro implements ChartPro {
   private _container: Nullable<HTMLElement>;
 
   private _chartApi: Nullable<ChartPro> = null;
+
+  private _datafeed: Datafeed;
 
   setTheme(theme: string): void {
     this._container?.setAttribute("data-theme", theme);
@@ -129,5 +137,9 @@ export default class KLineChartPro implements ChartPro {
 
   getPeriod(): Period {
     return this._chartApi!.getPeriod();
+  }
+
+  getDatafeed(): Datafeed {
+    return this._datafeed;
   }
 }

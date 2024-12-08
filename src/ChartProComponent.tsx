@@ -342,6 +342,7 @@ const ChartProComponent: Component<ChartProComponentProps> = (props) => {
           from,
           to
         );
+        console.log("rewrewerwrewr", kLineDataList);
         widget?.applyMoreData(kLineDataList, kLineDataList.length > 0);
         loading = false;
       };
@@ -401,7 +402,6 @@ const ChartProComponent: Component<ChartProComponentProps> = (props) => {
 
   onCleanup(() => {
     window.removeEventListener("resize", documentResize);
-    props.datafeed.unsubscribe();
     dispose(widgetRef!);
   });
 

@@ -1,6 +1,6 @@
 {
   "name": "kline-pro",
-  "version": "1.0.4",
+  "version": "1.0.8",
   "description": "Financial chart built out of the box based on KLineChart.",
   "type": "module",
   "main": "./dist/kline-pro.umd.js",
